@@ -63,8 +63,6 @@ public class CraftingStick extends UtilityStick {
 
     @Override
     public ActionResult<ItemStack> onItemRightClick(World world, PlayerEntity player, Hand hand) {
-        ItemStack item = player.getHeldItem(hand);
-
         player.openContainer(
                 new SimpleNamedContainerProvider((id, playerInv, playerEntity) ->
                         CONTAINER.apply(id, playerEntity),
