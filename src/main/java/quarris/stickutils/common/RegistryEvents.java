@@ -7,6 +7,7 @@ import net.minecraftforge.fml.common.Mod;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import quarris.stickutils.ModRef;
+import quarris.stickutils.common.items.CraftingStick;
 import quarris.stickutils.common.items.UtilityStick;
 
 @Mod.EventBusSubscriber(modid = ModRef.ID, bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -18,7 +19,7 @@ public class RegistryEvents {
 	public static void registerItems(RegistryEvent.Register<Item> event) {
 		LOGGER.info("Registering items for {}", ModRef.ID);
 		event.getRegistry().registerAll(
-				new UtilityStick("crafting_stick")
+				new CraftingStick()
 		);
 	}
 }
