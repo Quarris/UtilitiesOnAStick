@@ -1,0 +1,18 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " X",
+        "/ "
+    ],
+    "key": {
+        "/": {
+            "item": "minecraft:stick"
+        },
+        "X": {
+            "item": "minecraft:crafting_table"
+        }
+    },
+    "result": {
+        "item": "stickutils:crafting_stick"
+    }
+}

@@ -1,3 +1,4 @@
 {
-    "item.stickutils.crafting_stick": "Crafting Table on a Stick"
+    "item.stickutils.crafting_stick": "Crafting Table on a Stick",
+    "itemGroup.stickutils": "Utilities on a Stick"
 }
