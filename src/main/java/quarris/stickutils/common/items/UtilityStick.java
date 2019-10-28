@@ -9,6 +9,7 @@ public class UtilityStick extends Item {
 			.group(ModRef.GROUP)
 			.maxStackSize(1);
 
+	// TODO Container opening sticks should not be able to be picked up from the slot when opened
 	public UtilityStick(String name) {
 		super(UTIL_STICK_PROPERTIES);
 		this.setRegistryName(ModRef.createRes(name));
