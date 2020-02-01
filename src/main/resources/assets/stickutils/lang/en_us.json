@@ -3,6 +3,7 @@
     "item.stickutils.furnace_stick": "Furnace on a Stick",
     "item.stickutils.cat_stick": "Cat on a Stick",
     "item.stickutils.creeper_stick": "Creeper on a Stick",
+    "item.stickutils.mob_stick": "Monster on a Stick",
 
     "itemGroup.stickutils": "Utilities on a Stick"
 }

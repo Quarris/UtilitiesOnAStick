@@ -13,6 +13,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import quarris.stickutils.ModRef;
 import quarris.stickutils.common.Content;
+import quarris.stickutils.common.items.base.UtilityStick;
 
 public class CreeperStick extends UtilityStick {
 
@@ -23,8 +24,8 @@ public class CreeperStick extends UtilityStick {
     @Override
     public ActionResult<ItemStack> onItemRightClick(World world, PlayerEntity player, Hand hand) {
         if (!world.isRemote) {
-            world.createExplosion(null, player.posX, player.posY, player.posZ, (float) 3, Explosion.Mode.BREAK);
             player.getHeldItem(hand).shrink(1);
+            world.createExplosion(null, player.posX, player.posY, player.posZ, (float) 3, Explosion.Mode.BREAK);
         }
         return new ActionResult<>(ActionResultType.SUCCESS, player.getHeldItem(hand));
     }

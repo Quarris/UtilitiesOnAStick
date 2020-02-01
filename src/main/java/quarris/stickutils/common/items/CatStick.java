@@ -16,6 +16,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import quarris.stickutils.ModRef;
 import quarris.stickutils.common.Content;
+import quarris.stickutils.common.items.base.UtilityStick;
 
 public class CatStick extends UtilityStick {
 
@@ -51,7 +52,7 @@ public class CatStick extends UtilityStick {
                     creeper.goalSelector.addGoal(3, new AvoidEntityGoal<PlayerEntity>(creeper, PlayerEntity.class, 8, 1.0D, 1.2D, (player) -> player.getHeldItemMainhand().getItem() instanceof CatStick || player.getHeldItemOffhand().getItem() instanceof CatStick) {
                         @Override
                         public void startExecuting() {
-                            creeper.world.playSound(null, this.field_75376_d.getPosition(), SoundEvents.ENTITY_CAT_AMBIENT, SoundCategory.NEUTRAL, 1, 1.1f);
+                            creeper.world.playSound(null, this.entity.getPosition(), SoundEvents.ENTITY_CAT_AMBIENT, SoundCategory.NEUTRAL, 1, 1.1f);
                             super.startExecuting();
                         }
                     });

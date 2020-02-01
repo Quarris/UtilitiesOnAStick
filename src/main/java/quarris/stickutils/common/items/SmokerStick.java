@@ -6,27 +6,28 @@ import net.minecraft.item.crafting.IRecipeType;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.TranslationTextComponent;
 import quarris.stickutils.common.container.furnace.AbstractFurnaceStickContainer;
-import quarris.stickutils.common.container.furnace.FurnaceStickContainer;
+import quarris.stickutils.common.container.furnace.BlastStickContainer;
+import quarris.stickutils.common.container.furnace.SmokerStickContainer;
 import quarris.stickutils.common.items.base.AbstractFurnaceStick;
 
-public class FurnaceStick extends AbstractFurnaceStick {
+public class SmokerStick extends AbstractFurnaceStick {
 
-    public FurnaceStick() {
-        super("furnace_stick", IRecipeType.SMELTING);
+    public SmokerStick() {
+        super("smoker_stick", IRecipeType.SMOKING);
     }
 
     @Override
     protected Class<? extends AbstractFurnaceStickContainer> getContainerClass() {
-        return FurnaceStickContainer.class;
+        return SmokerStickContainer.class;
     }
 
     @Override
     protected Container getContainer(int id, PlayerInventory inventory, boolean isOffhand) {
-        return new FurnaceStickContainer(id, inventory, isOffhand);
+        return new SmokerStickContainer(id, inventory, isOffhand);
     }
 
     @Override
     protected ITextComponent getContainerDisplayName() {
-        return new TranslationTextComponent("container.furnace");
+        return new TranslationTextComponent("container.smoker");
     }
 }

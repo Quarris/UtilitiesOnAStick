@@ -6,27 +6,28 @@ import net.minecraft.item.crafting.IRecipeType;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.TranslationTextComponent;
 import quarris.stickutils.common.container.furnace.AbstractFurnaceStickContainer;
+import quarris.stickutils.common.container.furnace.BlastStickContainer;
 import quarris.stickutils.common.container.furnace.FurnaceStickContainer;
 import quarris.stickutils.common.items.base.AbstractFurnaceStick;
 
-public class FurnaceStick extends AbstractFurnaceStick {
+public class BlastStick extends AbstractFurnaceStick {
 
-    public FurnaceStick() {
-        super("furnace_stick", IRecipeType.SMELTING);
+    public BlastStick() {
+        super("blast_stick", IRecipeType.BLASTING);
     }
 
     @Override
     protected Class<? extends AbstractFurnaceStickContainer> getContainerClass() {
-        return FurnaceStickContainer.class;
+        return BlastStickContainer.class;
     }
 
     @Override
     protected Container getContainer(int id, PlayerInventory inventory, boolean isOffhand) {
-        return new FurnaceStickContainer(id, inventory, isOffhand);
+        return new BlastStickContainer(id, inventory, isOffhand);
     }
 
     @Override
     protected ITextComponent getContainerDisplayName() {
-        return new TranslationTextComponent("container.furnace");
+        return new TranslationTextComponent("container.blast_furnace");
     }
 }
