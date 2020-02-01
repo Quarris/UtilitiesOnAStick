@@ -144,7 +144,7 @@ public class FurnaceStick extends UtilityStick {
                         CONTAINER.apply(id, playerEntity),
                         new TranslationTextComponent("container.furnace"))
         );
-        return ActionResult.newResult(ActionResultType.SUCCESS, player.getHeldItem(hand));
+        return new ActionResult<>(ActionResultType.SUCCESS, player.getHeldItem(hand));
     }
 
     @Override

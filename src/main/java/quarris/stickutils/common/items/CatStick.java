@@ -36,9 +36,9 @@ public class CatStick extends UtilityStick {
                     player.getHeldItem(event.getHand()).shrink(1);
                     player.addItemStackToInventory(new ItemStack(Content.CAT_STICK));
                     target.remove();
-                    event.getWorld().playSound(target.posX, target.posY, target.posZ, SoundEvents.ENTITY_CAT_HURT, SoundCategory.PLAYERS, 20, 1.1f, true);
-                    event.getWorld().playSound(target.posX, target.posY, target.posZ, SoundEvents.ENTITY_CAT_HURT, SoundCategory.PLAYERS, 10, 1.3f, true);
-                    event.getWorld().playSound(target.posX, target.posY, target.posZ, SoundEvents.ENTITY_CAT_HURT, SoundCategory.PLAYERS, 5, 1.5f, true);
+                    event.getWorld().playSound(target.getPosX(), target.getPosY(), target.getPosZ(), SoundEvents.ENTITY_CAT_HURT, SoundCategory.PLAYERS, 20, 1.1f, true);
+                    event.getWorld().playSound(target.getPosX(), target.getPosY(), target.getPosZ(), SoundEvents.ENTITY_CAT_HURT, SoundCategory.PLAYERS, 10, 1.3f, true);
+                    event.getWorld().playSound(target.getPosX(), target.getPosY(), target.getPosZ(), SoundEvents.ENTITY_CAT_HURT, SoundCategory.PLAYERS, 5, 1.5f, true);
                 }
             }
         }
@@ -51,7 +51,7 @@ public class CatStick extends UtilityStick {
                     creeper.goalSelector.addGoal(3, new AvoidEntityGoal<PlayerEntity>(creeper, PlayerEntity.class, 8, 1.0D, 1.2D, (player) -> player.getHeldItemMainhand().getItem() instanceof CatStick || player.getHeldItemOffhand().getItem() instanceof CatStick) {
                         @Override
                         public void startExecuting() {
-                            creeper.world.playSound(null, this.field_75376_d.getPosition(), SoundEvents.ENTITY_CAT_AMBIENT, SoundCategory.NEUTRAL, 1, 1.1f);
+                            creeper.world.playSound(null, this.avoidTarget.getPosition(), SoundEvents.ENTITY_CAT_AMBIENT, SoundCategory.NEUTRAL, 1, 1.1f);
                             super.startExecuting();
                         }
                     });

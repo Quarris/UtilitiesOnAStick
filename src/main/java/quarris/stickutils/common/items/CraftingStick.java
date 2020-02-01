@@ -84,6 +84,6 @@ public class CraftingStick extends UtilityStick {
                         CONTAINER.apply(id, playerEntity),
                         new TranslationTextComponent("container.crafting"))
         );
-        return ActionResult.newResult(ActionResultType.SUCCESS, player.getHeldItem(hand));
+        return new ActionResult<>(ActionResultType.SUCCESS, player.getHeldItem(hand));
     }
 }
