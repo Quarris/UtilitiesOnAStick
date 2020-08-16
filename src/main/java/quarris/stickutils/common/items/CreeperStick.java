@@ -11,13 +11,13 @@ import net.minecraft.world.World;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-import quarris.stickutils.ModRef;
+import quarris.stickutils.StickUtils;
 import quarris.stickutils.common.Content;
 
 public class CreeperStick extends UtilityStick {
 
     public CreeperStick() {
-        super("creeper_stick");
+        super();
     }
 
     @Override
@@ -29,7 +29,7 @@ public class CreeperStick extends UtilityStick {
         return new ActionResult<>(ActionResultType.SUCCESS, player.getHeldItem(hand));
     }
 
-    @Mod.EventBusSubscriber(modid = ModRef.ID)
+    @Mod.EventBusSubscriber(modid = StickUtils.ID)
     public static class EventHandler {
 
         @SubscribeEvent

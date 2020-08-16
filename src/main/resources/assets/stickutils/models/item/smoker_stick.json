@@ -1,14 +1,14 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "stickutils:item/furnace_off_stick"
+        "layer0": "stickutils:item/smoker_off_stick"
     },
     "overrides": [
         {
             "predicate": {
                 "stickutils:on": 1
             },
-            "model": "stickutils:item/furnace_on_stick"
+            "model": "stickutils:item/smoker_on_stick"
         }
     ]
 }

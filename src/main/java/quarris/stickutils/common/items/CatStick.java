@@ -14,16 +14,16 @@ import net.minecraftforge.event.entity.EntityJoinWorldEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-import quarris.stickutils.ModRef;
+import quarris.stickutils.StickUtils;
 import quarris.stickutils.common.Content;
 
 public class CatStick extends UtilityStick {
 
     public CatStick() {
-        super("cat_stick");
+        super();
     }
 
-    @Mod.EventBusSubscriber(modid = ModRef.ID)
+    @Mod.EventBusSubscriber(modid = StickUtils.ID)
     public static class EventHandler {
 
         @SubscribeEvent

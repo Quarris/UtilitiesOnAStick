@@ -3,7 +3,8 @@ package quarris.stickutils.proxy;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 
 public class ServerProxy implements IProxy {
-	@Override
+
+    @Override
 	public void setup(FMLCommonSetupEvent event) {
 
 	}
